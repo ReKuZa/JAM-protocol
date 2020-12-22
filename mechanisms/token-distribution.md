@@ -30,7 +30,7 @@ Rewards are designed to incentivise the right balance between capital in Liquidi
 
 \*In the table below the %/% signifys the rewards split between LP rewards/ and HASH staking rewards
 
-| HASH/USDC mines HASHeS | HASHes Per week | Percent of total | HASH staking in DAO mines HASHeS \(Stake HASH to earn HASH\) |
+| HASH/USDC mines HASHeS | HASHes Per week | Percent of total | HASH staking in DAO mines HASHeS \(Stake HASH to earn HASHes\) |
 | :--- | :--- | :--- | :--- |
 | 1st week | 10000 | 100% | 0% |
 | 2nd week | 10000 | 100% | 10% |
