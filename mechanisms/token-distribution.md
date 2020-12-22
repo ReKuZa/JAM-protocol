@@ -1,10 +1,52 @@
 # Token Distribution
 
-The protocol starts with a Basis Share supply of zero, the entire supply minted purely via community distribution.
+10 week bootstrapping - target is 100m MC of HASH
 
-Initial distribution of Basis Cash are done to those that deposit DAI \(MCD\), yCRV, USDT, SUSD, and USDC to the distribution contract. A total of **50,000** Basis Cash tokens are distributed to depositors, with 10,000 Cash tokens distributed per day. Tokens are assigned equally to each stablecoin pools, and the amount of stablecoin deposits are limited to 20,000 tokens per account.
+Pre-Boardroom distribution;
 
-Afterwards, a total of **750,000** Basis Shares are distributed to those that provide liquidity to the BAC-DAI Uniswap v2 pair, where users can deposit BAC and DAI tokens to the distribution contract and earn BAS tokens. Distribution starts with 6250 BAS distributed every day, and the amount of daily seigniorage is reduced to 75% every 30 days \(e.g. 4687.5 BAS daily distribution starting from the 31st day\).
+#HASH (Cash) Distribution;
 
-Further distribution of Basis Shares are given to liquidity providers of the BAS-DAI Uniswap v2 pair. A total of **250,000** Basis Shares are distributed over a period of 1 year, and an equal amount of tokens are distributed per day.
+Starting stable pools;
+20k Wallet Limit
+50k HASH Distributed over 7 days.
+ESD
+AMPL
+DSD
+BAC
+USDC
+
+7 Days from Launch Boardroom begins block time countdown will be set 7 days from launch start time
+
+
+
+#HASHeS (Shares) Distribution;
+
+100k linearly for first 10 weeks
+Thereafter Halving distribution;
+50k for next 10 weeks,
+25k for next 10 weeks, etc….
+
+HASH/USDC pool mines HASHeS
+HASH staking mines HASHeS (Stake HASH to earn HASH)
+
+Hash staking goes live 7 days after first boardroom
+
+Rewards Distribution Split Between HASH/USDC Pool & Pure HASH Staking (For Capital Efficiency!)
+
+Rewards are designed to incentivise the right balance between capital in Liquidity Pools & Capital in DAO (Like bonding to DAO in ESD)
+
+*In the table below the %/% signifys the rewards split between LP rewards/ and HASH staking rewards
+
+| HASH/USDC mines HASHeS | HASHes Per week | Percent of total | HASH staking in DAO mines HASHeS (Stake HASH to earn HASH)  |   |   |
+|------------------------|-----------------|------------------|-------------------------------------------------------------|---|---|
+| 1st week               | 10000           | 100%             | 0%                                                          |   |   |
+| 2nd week               | 10000           | 100%             | 10%                                                         |   |   |
+| 3rd week               | 10000           | 90%              | 20%                                                         |   |   |
+| 4th                    | 10000           | 80%              | 30%                                                         |   |   |
+| 5th                    | 10000           | 70%              | 40%                                                         |   |   |
+| 6th                    | 10000           | 60%              | 50%                                                         |   |   |
+| 7th                    | 10000           | 50%              | 60%                                                         |   |   |
+| 8th                    | 10000           | 60%              | 70%                                                         |   |   |
+| 9th                    | 10000           | 30%              | 70%                                                         |   |   |
+| 10th                   | 10000           | 20%              | 80%                                                         |   |   |
 
