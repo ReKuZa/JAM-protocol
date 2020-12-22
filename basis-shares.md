@@ -1,4 +1,4 @@
-# Basis Shares
+# JAZZ Shares
 
 `Share.sol`
 
@@ -14,7 +14,7 @@ This contract is yet to be deployed.
 function mint(address recipient_, uint256 amount_) public onlyOperator returns (bool)
 ```
 
-Mints `amount_` Basis Shares to the `recipient_` account. Returns `TRUE` if successful.
+Mints `amount_` JAZZ Shares to the `recipient_` account. Returns `TRUE` if successful.
 
 ### burn‌ <a id="burn"></a>
 
@@ -22,7 +22,7 @@ Mints `amount_` Basis Shares to the `recipient_` account. Returns `TRUE` if succ
 function burn(uint256 amount) public onlyOperator override
 ```
 
-Burns `amount` Basis Shares from the operator's account.
+Burns `amount` JAZZ Shares from the operator's account.
 
 ### burnFrom‌ <a id="burnfrom"></a>
 
@@ -30,5 +30,5 @@ Burns `amount` Basis Shares from the operator's account.
 function burnFrom(address account, uint256 amount) public onlyOperator override
 ```
 
-Burns `amount` Basis Shares from the `account` account.
+Burns `amount` JAZZ Shares from the `account` account.
 

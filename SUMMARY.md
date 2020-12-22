@@ -12,8 +12,8 @@
 * [Treasury](treasury.md)
 * [Boardroom](boardroom.md)
 * [JAM Cash](basis-cash.md)
-* [Basis Bonds](basis-bonds.md)
-* [Basis Shares](basis-shares.md)
+* [JAB Bonds](basis-bonds.md)
+* [JAZZ Shares](basis-shares.md)
 * [Price Oracle](price-oracle.md)
 * [Token Distributor](token-distributor.md)
 

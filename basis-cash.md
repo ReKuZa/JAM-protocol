@@ -1,4 +1,4 @@
-# JAM Cash
+# Basis Cash
 
 `Cash.sol`
 
@@ -12,7 +12,7 @@ This contract is yet to be deployed.
 function mint(address recipient_, uint256 amount_) public onlyOperator returns (bool)
 ```
 
-Mints `amount_` JAM Cash to the `recipient_` account. Returns `TRUE` if successful.
+Mints `amount_` Basis Cash to the `recipient_` account. Returns `TRUE` if successful.
 
 ## burn <a id="burn"></a>
 
@@ -20,7 +20,7 @@ Mints `amount_` JAM Cash to the `recipient_` account. Returns `TRUE` if successf
 function burn(uint256 amount) public onlyOperator override
 ```
 
-Burns `amount` JAM Cash from the operator's account.
+Burns `amount` Basis Cash from the operator's account.
 
 ## burnFrom <a id="burnfrom"></a>
 
@@ -28,5 +28,5 @@ Burns `amount` JAM Cash from the operator's account.
 function burnFrom(address account, uint256 amount) public onlyOperator override
 ```
 
-Burns `amount` JAM Cash from the `account` account.
+Burns `amount` Basis Cash from the `account` account.
 
