@@ -2,11 +2,11 @@
 
 * [Home](README.md)
 * [Untitled](untitled.md)
-* [components](components/README.md)
+* [Components](components/README.md)
   * [Tokens](components/tokens.md)
   * [Cash Pools](components/cash-pools.md)
 * [Background](background.md)
-* [mechanisms](mechanisms/README.md)
+* [Mechanisms](mechanisms/README.md)
   * [Stabilization Mechanism](mechanisms/stabilization-mechanism.md)
   * [Launch Strategy](mechanisms/launch-strategy.md)
   * [Token Distribution](mechanisms/token-distribution.md)
