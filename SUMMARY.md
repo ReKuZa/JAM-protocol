@@ -1,4 +1,19 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [Home](README.md)
+* [components](components/README.md)
+  * [Tokens](components/tokens.md)
+  * [Cash Pools](components/cash-pools.md)
+* [Background](background.md)
+* [mechanisms](mechanisms/README.md)
+  * [Stabilization Mechanism](mechanisms/stabilization-mechanism.md)
+  * [Launch Strategy](mechanisms/launch-strategy.md)
+  * [Token Distribution](mechanisms/token-distribution.md)
+* [Treasury](treasury.md)
+* [Boardroom](boardroom.md)
+* [Basis Cash](basis-cash.md)
+* [Basis Bonds](basis-bonds.md)
+* [Basis Shares](basis-shares.md)
+* [Price Oracle](price-oracle.md)
+* [Token Distributor](token-distributor.md)
 
