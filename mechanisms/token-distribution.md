@@ -30,16 +30,16 @@ Rewards are designed to incentivise the right balance between capital in Liquidi
 
 \*In the table below the %/% signifys the rewards split between LP rewards/ and HASH staking rewards
 
-| HASH/USDC mines HASHeS | HASHes Per week | Percent of total | HASH staking in DAO mines HASHeS \(Stake HASH to earn HASH\) |  |  |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| 1st week | 10000 | 100% | 0% |  |  |
-| 2nd week | 10000 | 100% | 10% |  |  |
-| 3rd week | 10000 | 90% | 20% |  |  |
-| 4th | 10000 | 80% | 30% |  |  |
-| 5th | 10000 | 70% | 40% |  |  |
-| 6th | 10000 | 60% | 50% |  |  |
-| 7th | 10000 | 50% | 60% |  |  |
-| 8th | 10000 | 60% | 70% |  |  |
-| 9th | 10000 | 30% | 70% |  |  |
-| 10th | 10000 | 20% | 80% |  |  |
+| HASH/USDC mines HASHeS | HASHes Per week | Percent of total | HASH staking in DAO mines HASHeS \(Stake HASH to earn HASH\) |
+| :--- | :--- | :--- | :--- |
+| 1st week | 10000 | 100% | 0% |
+| 2nd week | 10000 | 100% | 10% |
+| 3rd week | 10000 | 90% | 20% |
+| 4th | 10000 | 80% | 30% |
+| 5th | 10000 | 70% | 40% |
+| 6th | 10000 | 60% | 50% |
+| 7th | 10000 | 50% | 60% |
+| 8th | 10000 | 60% | 70% |
+| 9th | 10000 | 30% | 70% |
+| 10th | 10000 | 20% | 80% |
 
