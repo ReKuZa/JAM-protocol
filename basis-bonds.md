@@ -1,4 +1,4 @@
-# JAB Bonds
+# Basis Bonds
 
 `Bond.sol`
 
@@ -14,7 +14,7 @@ This contract is yet to be deployed.
 function mint(address recipient_, uint256 amount_) public onlyOperator returns (bool)
 ```
 
-Mints `amount_` JAB Bonds to the `recipient_` account. Returns `TRUE` if successful.
+Mints `amount_` Basis Bonds to the `recipient_` account. Returns `TRUE` if successful.
 
 ### burn <a id="burn"></a>
 
@@ -22,7 +22,7 @@ Mints `amount_` JAB Bonds to the `recipient_` account. Returns `TRUE` if success
 function burn(uint256 amount) public onlyOperator override
 ```
 
-Burns `amount` JAB Bonds from the operator's account.
+Burns `amount` Basis Bonds from the operator's account.
 
 ### burnFrom <a id="burnfrom"></a>
 
@@ -30,5 +30,5 @@ Burns `amount` JAB Bonds from the operator's account.
 function burnFrom(address account, uint256 amount) public onlyOperator overrideBurns amount_ Basis Cash from the operator's account. Returns TRUE if successful.
 ```
 
-Burns `amount` JAB Bonds from the `account` account.
+Burns `amount` Basis Bonds from the `account` account.
 

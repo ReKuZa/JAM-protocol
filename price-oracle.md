@@ -16,7 +16,7 @@ This contract is yet to be deployed.
 event Updated(uint256 price0CumulativeLast, uint256 price1CumulativeLast);
 ```
 
-Emitted when the price of Basis Cash is updated via `update`.
+Emitted when the price of JAM Cash is updated via `update`.
 
 ## Functions <a id="functions"></a>
 
@@ -26,7 +26,7 @@ Emitted when the price of Basis Cash is updated via `update`.
 function update() external
 ```
 
-If 24 hours has passed since `update` was last successfully executed, updates the time-weighted average price \(TWAP\) of Basis Cash. Emits `Updated`.
+If 24 hours has passed since `update` was last successfully executed, updates the time-weighted average price \(TWAP\) of JAM Cash. Emits `Updated`.
 
 ### consult <a id="consult"></a>
 
