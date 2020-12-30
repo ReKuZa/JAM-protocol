@@ -1,36 +1,30 @@
-# Token Distribution Thanks to @sabretooth :)
+# Token Distribution
 
-10 week bootstrapping - target is 100m MC of JAM
+10 week bootstrapping - target is 100m MC of HASH
 
 Pre-Boardroom distribution;
 
-## JAM \(Cash\) Distribution;
+## HASH \(Cash\) Distribution;
 
- 20k Wallet Limit 50k JAM Distributed over 7 days. 
+ 20k Wallet Limit 50k HASH Distributed over 7 days. 
 
-Starting stable farm - Earn JAM by staking one of these currencies:
+Starting stable farm - Earn HASH by staking one of these currencies:
 
 ESD AMPL DSD BAC USDC
 
 Boardroom begins: 7 Days from stable farm launch  block time countdown will be set 7 days from launch start time
 
-## JAZZ \(Shares\) Distribution;
+## HASHeS \(Shares\) Distribution;
 
 100k linearly for first 10 weeks 
 
-JAM distribution dropping 10% every 10 weeks?
+Thereafter Halving distribution; 50k for next 10 weeks, 25k for next 10 weeks, etc….
 
-This is is keeping with the original basis distribution, but instead of distributing it over 1 year, it will now be a 6 year distribution(99%) with ~40% of tokens distributed in the first year.
+HASH/USDC pool mines HASHeS: LP rewards goes live on day 2.
 
-The difference in the first year is ~200k vs ~400k JAZZ, but the next 5 years will have ~0 vs ~600k, so it gives community more breathing room.
+ HASH staking mines HASHeS \(Stake HASH to earn HASH\): Hash staking goes live 7 days after first boardroom. 
 
-
-
-JAM/USDC pool mines JAZZ: LP rewards goes live on day 2.
-
- JAM staking mines JAZZ \(Stake JAM to earn JAZZ\): JAM staking goes live 7 days after first boardroom. 
-
-Rewards Distribution Split Between JAM/USDC Pool \(for deep liquidity when needed\) & Pure JAM Staking \(For Capital Efficiency!\)
+Rewards Distribution Split Between HASH/USDC Pool \(for deep liquidity when needed\) & Pure HASH Staking \(For Capital Efficiency!\)
 
 Rewards are designed to incentivise the right balance between capital in Liquidity Pools & Capital in DAO \(Like bonding to DAO in ESD\)
 
