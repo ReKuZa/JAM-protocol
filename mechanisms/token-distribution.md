@@ -16,9 +16,7 @@ Boardroom begins: 7 Days from stable farm launch  block time countdown will be s
 
 ## JAZZ \(Shares\) Distribution;
 
-100k linearly for first 10 weeks 
-
-
+**100k linearly for first 10 weeks** 
 
 JAM/USDC pool mines JAZZ: LP rewards goes live on day 2.
 
