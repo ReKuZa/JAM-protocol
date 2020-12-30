@@ -18,7 +18,13 @@ Boardroom begins: 7 Days from stable farm launch  block time countdown will be s
 
 100k linearly for first 10 weeks 
 
-Thereafter Halving distribution; 50k for next 10 weeks, 25k for next 10 weeks, etc….
+JAM distribution dropping 10% every 10 weeks?
+
+This is is keeping with the original basis distribution, but instead of distributing it over 1 year, it will now be a 6 year distribution(99%) with ~40% of tokens distributed in the first year.
+
+The difference in the first year is ~200k vs ~400k JAZZ, but the next 5 years will have ~0 vs ~600k, so it gives community more breathing room.
+
+
 
 JAM/USDC pool mines JAZZ: LP rewards goes live on day 2.
 
