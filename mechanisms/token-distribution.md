@@ -1,28 +1,28 @@
-# Token Distribution
+# Token Distribution Thanks to @sabretooth :)
 
-10 week bootstrapping - target is 100m MC of HASH
+10 week bootstrapping - target is 100m MC of JAM
 
 Pre-Boardroom distribution;
 
-## HASH \(Cash\) Distribution;
+## JAM \(Cash\) Distribution;
 
- 20k Wallet Limit 50k HASH Distributed over 7 days. 
+ 20k Wallet Limit 50k JAM Distributed over 7 days. 
 
-Starting stable farm - Earn HASH by staking one of these currencies:
+Starting stable farm - Earn JAM by staking one of these currencies:
 
 ESD AMPL DSD BAC USDC
 
 Boardroom begins: 7 Days from stable farm launch  block time countdown will be set 7 days from launch start time
 
-## HASHeS \(Shares\) Distribution;
+## JAZZ \(Shares\) Distribution;
 
 100k linearly for first 10 weeks 
 
 Thereafter Halving distribution; 50k for next 10 weeks, 25k for next 10 weeks, etc….
 
-HASH/USDC pool mines HASHeS: LP rewards goes live on day 2.
+JAM/USDC pool mines JAZZ: LP rewards goes live on day 2.
 
- HASH staking mines HASHeS \(Stake HASH to earn HASH\): Hash staking goes live 7 days after first boardroom. 
+ JAM staking mines JAZZ \(Stake JAM to earn JAZZ\): JAM staking goes live 7 days after first boardroom. 
 
 Rewards Distribution Split Between HASH/USDC Pool \(for deep liquidity when needed\) & Pure HASH Staking \(For Capital Efficiency!\)
 
@@ -30,7 +30,7 @@ Rewards are designed to incentivise the right balance between capital in Liquidi
 
 \*In the table below the %/% signifys the rewards split between LP rewards/ and HASH staking rewards
 
-| HASH/USDC mines HASHeS | HASHes Per week | Percent of total | HASH staking in DAO mines HASHeS \(Stake HASH to earn HASHes\) |
+| JAM/USDC mines JAZZ | JAZZ Per week | Percent of total | JAM staking in DAO mines JAZZ \(Stake JAM to earn JAZZ\) |
 | :--- | :--- | :--- | :--- |
 | 1st week | 10000 | 100% | 0% |
 | 2nd week | 10000 | 100% | 10% |
