@@ -24,7 +24,7 @@ JAM/USDC pool mines JAZZ: LP rewards goes live on day 2.
 
  JAM staking mines JAZZ \(Stake JAM to earn JAZZ\): JAM staking goes live 7 days after first boardroom. 
 
-Rewards Distribution Split Between HASH/USDC Pool \(for deep liquidity when needed\) & Pure HASH Staking \(For Capital Efficiency!\)
+Rewards Distribution Split Between JAM/USDC Pool \(for deep liquidity when needed\) & Pure JAM Staking \(For Capital Efficiency!\)
 
 Rewards are designed to incentivise the right balance between capital in Liquidity Pools & Capital in DAO \(Like bonding to DAO in ESD\)
 
