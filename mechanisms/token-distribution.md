@@ -1,6 +1,6 @@
 # Token Distribution
 
-10 week bootstrapping - target is 100m MC of HASH
+10 week bootstrapping - target is 100m MC of JAM
 
 Pre-Boardroom distribution;
 
