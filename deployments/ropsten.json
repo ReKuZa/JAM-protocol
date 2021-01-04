@@ -1,0 +1,10 @@
+{
+  "Cash": "0x936ff24d0e6734c85e093e5e4df23df5975adf9f",
+  "Bond": "0x8cca5a8110cd5c52f7a751cf01a6396e6872fbfc",
+  "Share": "0xb67835a774d4ce277679ddad669edb36adba2182",
+  "Oracle": "0xd654e15976c44fca2aee0559ee181ff015692233",
+  "Timelock": "0xF948260DA6989C1617D081f3A5074F57C0b5B947",
+  "Treasury": "0x80dd95a19339f79841592bf3eeca169b47b74b25",
+  "Boardroom": "0x00d08ECcFCBaeb26c911cD113a283171522664FE",
+  "SimpleERCFund": "0xc6c5cacad343aac4491c697e4cfbf50716f6dc04"
+}
