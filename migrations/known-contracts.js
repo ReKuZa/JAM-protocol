@@ -13,9 +13,13 @@ module.exports = {
     rinkeby: '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D',
     kovan: '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D',
   },
+  AC: {
+    rinkeby: '0xf14ca9df0a7d16f7ee3403b18724f89f3f1f95fd',
+  },
   FRAX: {
     mainnet: '',
     ropsten: '0x868034ef400b0950f3b1921a6d33d6d9c35634d2',
+    rinkeby: '0xa23a5d188c8e2f4b3e029815a793972c58d89890',
   },
   DSD: {
     mainnet: '0xbd2f0cd039e0bfcf88901c98c0bfac5ab27566e3',
@@ -29,6 +33,7 @@ module.exports = {
   DAI: {
     mainnet: '0x6b175474e89094c44da98b954eedeac495271d0f',
     ropsten: '0xad6d458402f60fd3bd25163575031acdce07538d',
+    rinkeby: '0x6f5390a8cd02d83b23c5f1d594bffb9050eb4ca3',
   },
   SUSD: {
     mainnet: '0x57Ab1E02fEE23774580C119740129eAC7081e9D3',
@@ -37,6 +42,7 @@ module.exports = {
     mainnet: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
     ropsten: '0x07865c6e87b9f70255377e024ace6630c1eaa37f',
     kovan: '0xdcfab8057d08634279f8201b55d311c2a67897d2',
+    rinkeby: '0xb7dbd69de83e7ed358c7687c1c1970e5dd121818',
   },
   USDT: {
     mainnet: '0xdAC17F958D2ee523a2206206994597C13D831ec7',
