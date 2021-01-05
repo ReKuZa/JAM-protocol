@@ -6,8 +6,8 @@ const Share = artifacts.require('Share');
 const Oracle = artifacts.require('Oracle');
 const MockDai = artifacts.require('MockDai');
 
-const DAIBACLPToken_BASPool = artifacts.require('DAIBACLPTokenSharePool');
-const DAIBASLPToken_BASPool = artifacts.require('DAIBASLPTokenSharePool');
+const DAIJAMLPToken_BASPool = artifacts.require('DAIJAMLPTokenSharePool');
+const DAIJAZZLPToken_BASPool = artifacts.require('DAIJAZZLPTokenSharePool');
 
 const UniswapV2Factory = artifacts.require('UniswapV2Factory');
 
@@ -34,13 +34,13 @@ module.exports = async (deployer, network, accounts) => {
   );
 
   await deployer.deploy(
-    DAIBACLPToken_BASPool,
+    DAIJAMLPToken_BASPool,
     Share.address,
     dai_bac_lpt,
     POOL_START_DATE
   );
   await deployer.deploy(
-    DAIBASLPToken_BASPool,
+    DAIJAZZLPToken_BASPool,
     Share.address,
     dai_bas_lpt,
     POOL_START_DATE
