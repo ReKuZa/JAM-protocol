@@ -8,25 +8,25 @@ import '../distribution/JAMESDPool.sol';
 import '../distribution/JAMUSDCPool.sol';
 import '../interfaces/IDistributor.sol';
 
-contract InitialCashDistributor is IDistributor {
+contract InitialJAMDistributor is IDistributor {
     using SafeMath for uint256;
 
-    event Distributed(address pool, uint256 cashAmount);
+    event Distributed(address pool, uint256 jamAmount);
 
     bool public once = true;
 
-    IERC20 public cash;
+    IERC20 public jam;
     IRewardDistributionRecipient[] public pools;
     uint256 public totalInitialBalance;
 
     constructor(
-        IERC20 _cash,
+        IERC20 _jam,
         IRewardDistributionRecipient[] memory _pools,
         uint256 _totalInitialBalance
     ) public {
         require(_pools.length != 0, 'a list of BAC pools are required');
 
-        cash = _cash;
+        jam = _jam;
         pools = _pools;
         totalInitialBalance = _totalInitialBalance;
     }
@@ -34,13 +34,13 @@ contract InitialCashDistributor is IDistributor {
     function distribute() public override {
         require(
             once,
-            'InitialCashDistributor: you cannot run this function twice'
+            'InitialJAMDistributor: you cannot run this function twice'
         );
 
         for (uint256 i = 0; i < pools.length; i++) {
             uint256 amount = totalInitialBalance.div(pools.length);
 
-            cash.transfer(address(pools[i]), amount);
+            jam.transfer(address(pools[i]), amount);
             pools[i].notifyRewardAmount(amount);
 
             emit Distributed(address(pools[i]), amount);

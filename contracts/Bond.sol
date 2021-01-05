@@ -5,14 +5,14 @@ import '@openzeppelin/contracts/token/ERC20/ERC20Burnable.sol';
 
 contract Bond is ERC20Burnable, Ownable, Operator {
     /**
-     * @notice Constructs the Basis Bond ERC-20 contract.
+     * @notice Constructs the JAM Bond ERC-20 contract.
      */
-    constructor() public ERC20('BAB', 'BAB') {}
+    constructor() public ERC20('JAB', 'JAB') {}
 
     /**
-     * @notice Operator mints basis bonds to a recipient
+     * @notice Operator mints jam bonds to a recipient
      * @param recipient_ The address of recipient
-     * @param amount_ The amount of basis bonds to mint to
+     * @param amount_ The amount of jam bonds to mint to
      * @return whether the process has been done
      */
     function mint(address recipient_, uint256 amount_)

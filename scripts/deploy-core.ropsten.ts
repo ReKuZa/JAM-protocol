@@ -36,7 +36,7 @@ async function main() {
 
   // Fetch existing contracts
   // === token
-  const cash = await ethers.getContractAt('Cash', OLD.Cash);
+  const jam = await ethers.getContractAt('JAM', OLD.JAM);
   const bond = await ethers.getContractAt('Bond', OLD.Bond);
   const share = await ethers.getContractAt('Share', OLD.Share);
 
@@ -74,7 +74,7 @@ async function main() {
 
   const bondOracle = await Oracle.connect(operator).deploy(
     UNI_FACTORY,
-    cash.address,
+    jam.address,
     DAI,
     HOUR,
     ORACLE_START_DATE,
@@ -86,7 +86,7 @@ async function main() {
   );
 
   // const newBoardroom = await Boardroom.connect(operator).deploy(
-  //   cash.address,
+  //   jam.address,
   //   share.address,
   //   override
   // );
@@ -96,7 +96,7 @@ async function main() {
   // );
   console.log('before new treasury')
   const newTreasury = await Treasury.connect(operator).deploy(
-    cash.address,
+    jam.address,
     bond.address,
     share.address,
     bondOracle.address,

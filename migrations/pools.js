@@ -1,4 +1,3 @@
-// https://docs.basis.cash/mechanisms/yield-farming
 const INITIAL_BAC_FOR_POOLS = 50000;
 const INITIAL_BAS_FOR_DAI_BAC = 750000;
 const INITIAL_BAS_FOR_DAI_BAS = 250000;
@@ -16,7 +15,7 @@ const bacPools = [
 const basPools = {
   DAIBAC: { contractName: 'DAIBACLPTokenSharePool', token: 'DAI_BAC-LPv2' },
   DAIBAS: { contractName: 'DAIBASLPTokenSharePool', token: 'DAI_BAS-LPv2' },
-}
+};
 
 module.exports = {
   POOL_START_DATE,
