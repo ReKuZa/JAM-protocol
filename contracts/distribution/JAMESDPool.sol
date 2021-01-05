@@ -93,7 +93,7 @@ contract ESDWrapper {
 }
 
 contract JAMESDPool is ESDWrapper, IRewardDistributionRecipient {
-    IERC20 public basisCash;
+    IERC20 public hashCash;
     uint256 public DURATION = 7 days;
 
     uint256 public starttime;
@@ -111,11 +111,11 @@ contract JAMESDPool is ESDWrapper, IRewardDistributionRecipient {
     event RewardPaid(address indexed user, uint256 reward);
 
     constructor(
-        address basisCash_,
+        address hashCash_,
         address esd_,
         uint256 starttime_
     ) public {
-        basisCash = IERC20(basisCash_);
+        hashCash = IERC20(hashCash_);
         esd = IERC20(esd_);
         starttime = starttime_;
     }
@@ -200,7 +200,7 @@ contract JAMESDPool is ESDWrapper, IRewardDistributionRecipient {
         uint256 reward = earned(msg.sender);
         if (reward > 0) {
             rewards[msg.sender] = 0;
-            basisCash.safeTransfer(msg.sender, reward);
+            hashCash.safeTransfer(msg.sender, reward);
             emit RewardPaid(msg.sender, reward);
         }
     }

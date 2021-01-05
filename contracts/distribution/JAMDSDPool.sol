@@ -71,11 +71,11 @@ contract DSDWrapper {
     uint256 private _totalSupply;
     mapping(address => uint256) private _balances;
 
-    function totalSupply() public virtual view returns (uint256) {
+    function totalSupply() public view virtual returns (uint256) {
         return _totalSupply;
     }
 
-    function balanceOf(address account) public virtual view returns (uint256) {
+    function balanceOf(address account) public view virtual returns (uint256) {
         return _balances[account];
     }
 
@@ -93,7 +93,7 @@ contract DSDWrapper {
 }
 
 contract JAMDSDPool is DSDWrapper, IRewardDistributionRecipient {
-    IERC20 public basisCash;
+    IERC20 public hashCash;
     uint256 public DURATION = 7 days;
 
     uint256 public starttime;
@@ -111,11 +111,11 @@ contract JAMDSDPool is DSDWrapper, IRewardDistributionRecipient {
     event RewardPaid(address indexed user, uint256 reward);
 
     constructor(
-        address basisCash_,
+        address hashCash_,
         address DSD_,
         uint256 starttime_
     ) public {
-        basisCash = IERC20(basisCash_);
+        hashCash = IERC20(hashCash_);
         DSD = IERC20(DSD_);
         starttime = starttime_;
     }
@@ -200,7 +200,7 @@ contract JAMDSDPool is DSDWrapper, IRewardDistributionRecipient {
         uint256 reward = earned(msg.sender);
         if (reward > 0) {
             rewards[msg.sender] = 0;
-            basisCash.safeTransfer(msg.sender, reward);
+            hashCash.safeTransfer(msg.sender, reward);
             emit RewardPaid(msg.sender, reward);
         }
     }

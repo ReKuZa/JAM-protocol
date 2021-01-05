@@ -5,15 +5,16 @@ const util = require('util');
 const writeFile = util.promisify(fs.writeFile);
 
 function distributionPoolContracts() {
-    return fs.readdirSync(path.resolve(__dirname, '../contracts/distribution'))
-      .filter(filename => filename.endsWith('Pool.sol'))
-      .map(filename => filename.replace('.sol', ''));
+  return fs
+    .readdirSync(path.resolve(__dirname, '../contracts/distribution'))
+    .filter((filename) => filename.endsWith('Pool.sol'))
+    .map((filename) => filename.replace('.sol', ''));
 }
 
 // Deployment and ABI will be generated for contracts listed on here.
 // The deployment thus can be used on basiscash-frontend.
 const exportedContracts = [
-  'Cash',
+  'JAM',
   'Bond',
   'Share',
   'Boardroom',
@@ -31,7 +32,10 @@ module.exports = async (deployer, network, accounts) => {
       abi: contract.abi,
     };
   }
-  const deploymentPath = path.resolve(__dirname, `../build/deployments.${network}.json`);
+  const deploymentPath = path.resolve(
+    __dirname,
+    `../build/deployments.${network}.json`
+  );
   await writeFile(deploymentPath, JSON.stringify(deployments, null, 2));
 
   console.log(`Exported deployments into ${deploymentPath}`);
