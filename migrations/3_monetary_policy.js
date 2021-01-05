@@ -15,7 +15,9 @@ const Treasury = artifacts.require('Treasury')
 const UniswapV2Factory = artifacts.require('UniswapV2Factory');
 const UniswapV2Router02 = artifacts.require('UniswapV2Router02');
 
+const HOUR = 60 * 60;
 const DAY = 86400;
+const ORACLE_START_DATE = Date.parse('2020-12-19T00:00:00Z') / 1000;
 
 async function migration(deployer, network, accounts) {
   let uniswap, uniswapRouter;
@@ -73,6 +75,8 @@ async function migration(deployer, network, accounts) {
     uniswap.address,
     cash.address,
     dai.address,
+    HOUR,
+    ORACLE_START_DATE
   );
 
   let startTime = POOL_START_DATE;
