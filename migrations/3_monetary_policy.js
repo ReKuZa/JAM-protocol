@@ -11,6 +11,7 @@ const MockDai = artifacts.require('MockDai');
 const Oracle = artifacts.require('Oracle')
 const Boardroom = artifacts.require('Boardroom')
 const Treasury = artifacts.require('Treasury')
+const SimpleFund = artifacts.require('SimpleERCFund')
 
 const UniswapV2Factory = artifacts.require('UniswapV2Factory');
 const UniswapV2Router02 = artifacts.require('UniswapV2Router02');
@@ -69,6 +70,9 @@ async function migration(deployer, network, accounts) {
   // Deploy boardroom
   await deployer.deploy(Boardroom, cash.address, share.address);
 
+  // Deploy simpleFund
+  await deployer.deploy(SimpleFund);
+
   // 2. Deploy oracle for the pair between bac and dai
   await deployer.deploy(
     Oracle,
@@ -90,7 +94,9 @@ async function migration(deployer, network, accounts) {
     Bond.address,
     Share.address,
     Oracle.address,
+    Oracle.address,
     Boardroom.address,
+    SimpleFund.address,
     startTime,
   );
 }
