@@ -64,7 +64,8 @@ module.exports = {
           MNEMONIC,
           `https://ropsten.infura.io/v3/${INFURA_KEY}`
         ),
-      network_id: 3, // Ropsten's id
+      network_id: 3, // Ropsten's id,
+      skipDryRun: true,
     },
     rinkeby: {
       provider: () =>
@@ -73,6 +74,7 @@ module.exports = {
           `https://rinkeby.infura.io/v3/${INFURA_KEY}`
         ),
       network_id: 4, // Rinkeby's id
+      skipDryRun: true,
     },
     // Useful for private networks
     // private: {
