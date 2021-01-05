@@ -62,11 +62,11 @@ import '@openzeppelin/contracts/token/ERC20/SafeERC20.sol';
 
 import '../interfaces/IRewardDistributionRecipient.sol';
 
-contract BACWrapper {
+contract ESDWrapper {
     using SafeMath for uint256;
     using SafeERC20 for IERC20;
 
-    IERC20 public bac;
+    IERC20 public esd;
 
     uint256 private _totalSupply;
     mapping(address => uint256) private _balances;
@@ -82,17 +82,17 @@ contract BACWrapper {
     function stake(uint256 amount) public virtual {
         _totalSupply = _totalSupply.add(amount);
         _balances[msg.sender] = _balances[msg.sender].add(amount);
-        bac.safeTransferFrom(msg.sender, address(this), amount);
+        esd.safeTransferFrom(msg.sender, address(this), amount);
     }
 
     function withdraw(uint256 amount) public virtual {
         _totalSupply = _totalSupply.sub(amount);
         _balances[msg.sender] = _balances[msg.sender].sub(amount);
-        bac.safeTransfer(msg.sender, amount);
+        esd.safeTransfer(msg.sender, amount);
     }
 }
 
-contract JAMBACPool is BACWrapper, IRewardDistributionRecipient {
+contract JAMESDPool is ESDWrapper, IRewardDistributionRecipient {
     IERC20 public hashCash;
     uint256 public DURATION = 7 days;
 
@@ -112,16 +112,16 @@ contract JAMBACPool is BACWrapper, IRewardDistributionRecipient {
 
     constructor(
         address hashCash_,
-        address bac_,
+        address esd_,
         uint256 starttime_
     ) public {
         hashCash = IERC20(hashCash_);
-        bac = IERC20(bac_);
+        esd = IERC20(esd_);
         starttime = starttime_;
     }
 
     modifier checkStart() {
-        require(block.timestamp >= starttime, 'JAMBACPool: not start');
+        require(block.timestamp >= starttime, 'JAMESDPool: not start');
         _;
     }
 
@@ -168,11 +168,11 @@ contract JAMBACPool is BACWrapper, IRewardDistributionRecipient {
         updateReward(msg.sender)
         checkStart
     {
-        require(amount > 0, 'JAMBACPool: Cannot stake 0');
+        require(amount > 0, 'JAMESDPool: Cannot stake 0');
         uint256 newDeposit = deposits[msg.sender].add(amount);
         require(
             newDeposit <= 20000e6,
-            'JAMBACPool: deposit amount exceeds maximum 20000'
+            'JAMESDPool: deposit amount exceeds maximum 20000'
         );
         deposits[msg.sender] = newDeposit;
         super.stake(amount);
@@ -185,7 +185,7 @@ contract JAMBACPool is BACWrapper, IRewardDistributionRecipient {
         updateReward(msg.sender)
         checkStart
     {
-        require(amount > 0, 'JAMBACPool: Cannot withdraw 0');
+        require(amount > 0, 'JAMESDPool: Cannot withdraw 0');
         deposits[msg.sender] = deposits[msg.sender].sub(amount);
         super.withdraw(amount);
         emit Withdrawn(msg.sender, amount);

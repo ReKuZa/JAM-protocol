@@ -5,6 +5,7 @@ const INITIAL_BAS_FOR_DAI_BAS = 250000;
 const POOL_START_DATE = Date.parse('2020-11-30T00:00:00Z') / 1000;
 
 const bacPools = [
+  { contractName: 'JAMACPool', token: 'AC' },
   { contractName: 'JAMFRAXPool', token: 'FRAX' },
   { contractName: 'JAMBACPool', token: 'BAC' },
   { contractName: 'JAMDSDPool', token: 'DSD' },
