@@ -35,19 +35,10 @@ module.exports = {
     ropsten: '0xad6d458402f60fd3bd25163575031acdce07538d',
     rinkeby: '0x6f5390a8cd02d83b23c5f1d594bffb9050eb4ca3',
   },
-  SUSD: {
-    mainnet: '0x57Ab1E02fEE23774580C119740129eAC7081e9D3',
-  },
   USDC: {
     mainnet: '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48',
     ropsten: '0x07865c6e87b9f70255377e024ace6630c1eaa37f',
     kovan: '0xdcfab8057d08634279f8201b55d311c2a67897d2',
     rinkeby: '0xb7dbd69de83e7ed358c7687c1c1970e5dd121818',
-  },
-  USDT: {
-    mainnet: '0xdAC17F958D2ee523a2206206994597C13D831ec7',
-  },
-  yCRV: {
-    mainnet: '0xdF5e0e81Dff6FAF3A7e52BA697820c5e32D806A8',
   },
 };

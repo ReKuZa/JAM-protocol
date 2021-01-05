@@ -1,5 +1,5 @@
 const knownContracts = require('./known-contracts');
-const { bacPools, POOL_START_DATE } = require('./pools');
+const { jamPools, POOL_START_DATE } = require('./pools');
 
 // Tokens
 // deployed first
@@ -8,7 +8,7 @@ const MockDai = artifacts.require('MockDai');
 
 // ============ Main Migration ============
 module.exports = async (deployer, network, accounts) => {
-  for await (const { contractName, token } of bacPools) {
+  for await (const { contractName, token } of jamPools) {
     const tokenAddress = knownContracts[token][network] || MockDai.address;
     if (!tokenAddress) {
       // network is mainnet, so MockDai is not available

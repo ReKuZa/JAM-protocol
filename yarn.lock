@@ -8997,10 +8997,10 @@ truffle-flattener@^1.5.0:
     mkdirp "^1.0.4"
     tsort "0.0.1"
 
-truffle@5.1.49:
-  version "5.1.49"
-  resolved "https://registry.yarnpkg.com/truffle/-/truffle-5.1.49.tgz"
-  integrity sha512-SkCfYRPhruowxH+qpJBAvM0u5+j/LK51U85ErXeiuRhyCNEWMNjUtISHTlEZ0KLr0Kki68iXk+o2UekN4Nlp5g==
+truffle@^5.1.60:
+  version "5.1.60"
+  resolved "https://registry.yarnpkg.com/truffle/-/truffle-5.1.60.tgz#ff7b8b64c3863333024d1c836d90caaa4ac31770"
+  integrity sha512-UPu4QECgK5oJaBqQqwFigGvQUR7ytRGr9Y0y4iEN86V0w8HpEvQ3IDCeDZ6XcRa52CCrYMBF7Vcbzbcme+t61g==
   dependencies:
     app-module-path "^2.2.0"
     mocha "8.1.2"

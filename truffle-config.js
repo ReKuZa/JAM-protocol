@@ -64,7 +64,8 @@ module.exports = {
           MNEMONIC,
           `https://ropsten.infura.io/v3/${INFURA_KEY}`
         ),
-      network_id: 3, // Ropsten's id
+      network_id: 3, // Ropsten's id,
+      skipDryRun: true,
     },
     rinkeby: {
       provider: () =>

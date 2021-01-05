@@ -1,4 +1,4 @@
-const { bacPools, INITIAL_BAC_FOR_POOLS } = require('./pools');
+const { jamPools, INITIAL_JAM_FOR_POOLS } = require('./pools');
 
 // Pools
 // deployed first
@@ -9,10 +9,10 @@ const InitialJAMDistributor = artifacts.require('InitialJAMDistributor');
 
 module.exports = async (deployer, network, accounts) => {
   const unit = web3.utils.toBN(10 ** 18);
-  const initialJamAmount = unit.muln(INITIAL_BAC_FOR_POOLS).toString();
+  const initialJamAmount = unit.muln(INITIAL_JAM_FOR_POOLS).toString();
 
   const jam = await JAM.deployed();
-  const pools = bacPools.map(({ contractName }) =>
+  const pools = jamPools.map(({ contractName }) =>
     artifacts.require(contractName)
   );
 
@@ -34,7 +34,7 @@ module.exports = async (deployer, network, accounts) => {
 
   await jam.mint(distributor.address, initialJamAmount);
   console.log(
-    `Deposited ${INITIAL_BAC_FOR_POOLS} BAC to InitialJAMDistributor.`
+    `Deposited ${INITIAL_JAM_FOR_POOLS} JAM to InitialJAMDistributor.`
   );
 
   await distributor.distribute();
