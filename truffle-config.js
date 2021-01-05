@@ -73,6 +73,7 @@ module.exports = {
           `https://rinkeby.infura.io/v3/${INFURA_KEY}`
         ),
       network_id: 4, // Rinkeby's id
+      skipDryRun: true,
     },
     // Useful for private networks
     // private: {
