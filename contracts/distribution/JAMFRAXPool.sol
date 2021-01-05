@@ -62,11 +62,11 @@ import '@openzeppelin/contracts/token/ERC20/SafeERC20.sol';
 
 import '../interfaces/IRewardDistributionRecipient.sol';
 
-contract AMPLWrapper {
+contract FRAXWrapper {
     using SafeMath for uint256;
     using SafeERC20 for IERC20;
 
-    IERC20 public AMPL;
+    IERC20 public FRAX;
 
     uint256 private _totalSupply;
     mapping(address => uint256) private _balances;
@@ -82,17 +82,17 @@ contract AMPLWrapper {
     function stake(uint256 amount) public virtual {
         _totalSupply = _totalSupply.add(amount);
         _balances[msg.sender] = _balances[msg.sender].add(amount);
-        AMPL.safeTransferFrom(msg.sender, address(this), amount);
+        FRAX.safeTransferFrom(msg.sender, address(this), amount);
     }
 
     function withdraw(uint256 amount) public virtual {
         _totalSupply = _totalSupply.sub(amount);
         _balances[msg.sender] = _balances[msg.sender].sub(amount);
-        AMPL.safeTransfer(msg.sender, amount);
+        FRAX.safeTransfer(msg.sender, amount);
     }
 }
 
-contract JAMAMPLPool is AMPLWrapper, IRewardDistributionRecipient {
+contract JAMFRAXPool is FRAXWrapper, IRewardDistributionRecipient {
     IERC20 public hashCash;
     uint256 public DURATION = 7 days;
 
@@ -112,16 +112,16 @@ contract JAMAMPLPool is AMPLWrapper, IRewardDistributionRecipient {
 
     constructor(
         address hashCash_,
-        address ampl_,
+        address FRAX_,
         uint256 starttime_
     ) public {
         hashCash = IERC20(hashCash_);
-        AMPL = IERC20(ampl_);
+        FRAX = IERC20(FRAX_);
         starttime = starttime_;
     }
 
     modifier checkStart() {
-        require(block.timestamp >= starttime, 'JAMAMPLPool: not start');
+        require(block.timestamp >= starttime, 'JAMFRAXPool: not start');
         _;
     }
 
@@ -168,11 +168,11 @@ contract JAMAMPLPool is AMPLWrapper, IRewardDistributionRecipient {
         updateReward(msg.sender)
         checkStart
     {
-        require(amount > 0, 'JAMAMPLPool: Cannot stake 0');
+        require(amount > 0, 'JAMFRAXPool: Cannot stake 0');
         uint256 newDeposit = deposits[msg.sender].add(amount);
         require(
             newDeposit <= 20000e18,
-            'JAMAMPLPool: deposit amount exceeds maximum 20000'
+            'JAMFRAXPool: deposit amount exceeds maximum 20000'
         );
         deposits[msg.sender] = newDeposit;
         super.stake(amount);
@@ -185,7 +185,7 @@ contract JAMAMPLPool is AMPLWrapper, IRewardDistributionRecipient {
         updateReward(msg.sender)
         checkStart
     {
-        require(amount > 0, 'JAMAMPLPool: Cannot withdraw 0');
+        require(amount > 0, 'JAMFRAXPool: Cannot withdraw 0');
         deposits[msg.sender] = deposits[msg.sender].sub(amount);
         super.withdraw(amount);
         emit Withdrawn(msg.sender, amount);
