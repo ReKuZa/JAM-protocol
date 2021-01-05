@@ -1,8 +1,8 @@
 pragma solidity ^0.6.0;
 
 import '../distribution/JAMACPool.sol';
-import '../distribution/JAMAMPLPool.sol';
-import '../distribution/JAMBACPool.sol';
+import '../distribution/JAMFRAXPool.sol';
+import '../distribution/JAMDAIPool.sol';
 import '../distribution/JAMDSDPool.sol';
 import '../distribution/JAMESDPool.sol';
 import '../distribution/JAMUSDCPool.sol';
