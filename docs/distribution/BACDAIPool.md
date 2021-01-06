@@ -4,7 +4,7 @@
 
 ### `updateReward(address account)`
 
-### `constructor(address hashCash_, address dai_, uint256 starttime_)` (public)
+### `constructor(address jamCash_, address dai_, uint256 starttime_)` (public)
 
 ### `lastTimeRewardApplicable() → uint256` (public)
 

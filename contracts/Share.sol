@@ -7,13 +7,13 @@ contract Share is ERC20Burnable, Operator {
     constructor() public ERC20('JAZZ', 'JAZZ') {
         // Mints 1 Jam Share to contract creator for initial Uniswap oracle deployment.
         // Will be burned after oracle deployment
-        _mint(msg.sender, 1 * 10**18);
+        // _mint(msg.sender, 1 * 10**18);
     }
 
     /**
-     * @notice Operator mints hash cash to a recipient
+     * @notice Operator mints jam cash to a recipient
      * @param recipient_ The address of recipient
-     * @param amount_ The amount of hash cash to mint to
+     * @param amount_ The amount of jam cash to mint to
      */
     function mint(address recipient_, uint256 amount_)
         public

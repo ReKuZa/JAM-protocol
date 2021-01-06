@@ -93,7 +93,7 @@ contract USDCWrapper {
 }
 
 contract JAMUSDCPool is USDCWrapper, IRewardDistributionRecipient {
-    IERC20 public hashCash;
+    IERC20 public jamCash;
     uint256 public DURATION = 7 days;
 
     uint256 public starttime;
@@ -111,11 +111,11 @@ contract JAMUSDCPool is USDCWrapper, IRewardDistributionRecipient {
     event RewardPaid(address indexed user, uint256 reward);
 
     constructor(
-        address hashCash_,
+        address jamCash_,
         address usdc_,
         uint256 starttime_
     ) public {
-        hashCash = IERC20(hashCash_);
+        jamCash = IERC20(jamCash_);
         usdc = IERC20(usdc_);
         starttime = starttime_;
     }
@@ -200,7 +200,7 @@ contract JAMUSDCPool is USDCWrapper, IRewardDistributionRecipient {
         uint256 reward = earned(msg.sender);
         if (reward > 0) {
             rewards[msg.sender] = 0;
-            hashCash.safeTransfer(msg.sender, reward);
+            jamCash.safeTransfer(msg.sender, reward);
             emit RewardPaid(msg.sender, reward);
         }
     }

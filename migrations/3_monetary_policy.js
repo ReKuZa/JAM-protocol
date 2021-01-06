@@ -6,7 +6,6 @@ const JAM = artifacts.require('JAM');
 const Bond = artifacts.require('Bond');
 const Share = artifacts.require('Share');
 const IERC20 = artifacts.require('IERC20');
-const MockDai = artifacts.require('MockDai');
 
 const Oracle = artifacts.require('Oracle');
 const Boardroom = artifacts.require('Boardroom');
@@ -38,13 +37,10 @@ async function migration(deployer, network, accounts) {
     );
   }
 
-  const dai =
-    network === 'mainnet'
-      ? await IERC20.at(knownContracts.DAI[network])
-      : await MockDai.deployed();
+  const usdc = await IERC20.at(knownContracts.USDC[network]);
 
-  // 2. provide liquidity to BAC-DAI and BAS-DAI pair
-  // if you don't provide liquidity to BAC-DAI and BAS-DAI pair after step 1 and before step 3,
+  // 2. provide liquidity to JAM-USDC
+  // if you don't provide liquidity to JAM-USDC pair after step 1 and before step 3,
   //  creating Oracle will fail with NO_RESERVES error.
   const unit = web3.utils.toBN(10 ** 18).toString();
   const max = web3.utils
@@ -58,26 +54,15 @@ async function migration(deployer, network, accounts) {
   console.log('Approving Uniswap on tokens for liquidity');
   await Promise.all([
     approveIfNot(jam, accounts[0], uniswapRouter.address, max),
-    approveIfNot(share, accounts[0], uniswapRouter.address, max),
-    approveIfNot(dai, accounts[0], uniswapRouter.address, max),
+    approveIfNot(usdc, accounts[0], uniswapRouter.address, max),
   ]);
 
-  // WARNING: msg.sender must hold enough DAI to add liquidity to BAC-DAI & BAS-DAI pools
+  // WARNING: msg.sender must hold enough USDC to add liquidity to JAM-USDC
   // otherwise transaction will revert
   console.log('Adding liquidity to pools');
   await uniswapRouter.addLiquidity(
     jam.address,
-    dai.address,
-    unit,
-    unit,
-    unit,
-    unit,
-    accounts[0],
-    deadline()
-  );
-  await uniswapRouter.addLiquidity(
-    share.address,
-    dai.address,
+    usdc.address,
     unit,
     unit,
     unit,
@@ -87,13 +72,7 @@ async function migration(deployer, network, accounts) {
   );
 
   console.log(
-    `DAI-JAM pair address: ${await uniswap.getPair(dai.address, jam.address)}`
-  );
-  console.log(
-    `DAI-JAZZ pair address: ${await uniswap.getPair(
-      dai.address,
-      share.address
-    )}`
+    `USDC-JAM pair address: ${await uniswap.getPair(usdc.address, jam.address)}`
   );
 
   // Deploy boardroom
@@ -102,12 +81,12 @@ async function migration(deployer, network, accounts) {
   // Deploy simpleFund
   await deployer.deploy(SimpleFund);
 
-  // 2. Deploy oracle for the pair between bac and dai
+  // 2. Deploy oracle for the pair between bac and usdc
   await deployer.deploy(
     Oracle,
     uniswap.address,
     jam.address,
-    dai.address,
+    usdc.address,
     HOUR,
     ORACLE_START_DATE
   );

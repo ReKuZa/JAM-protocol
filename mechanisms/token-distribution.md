@@ -26,7 +26,7 @@ Rewards Distribution Split Between JAM/USDC Pool \(for deep liquidity when neede
 
 Rewards are designed to incentivise the right balance between capital in Liquidity Pools & Capital in DAO \(Like bonding to DAO in ESD\)
 
-\*In the table below the %/% signifys the rewards split between LP rewards/ and HASH staking rewards
+\*In the table below the %/% signifys the rewards split between LP rewards/ and JAM staking rewards
 
 | JAM/USDC mines JAZZ | JAZZ Per week | Percent of total | JAM staking in DAO mines JAZZ \(Stake JAM to earn JAZZ\) |
 | :--- | :--- | :--- | :--- |

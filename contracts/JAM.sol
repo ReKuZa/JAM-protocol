@@ -5,10 +5,10 @@ import './owner/Operator.sol';
 
 contract JAM is ERC20Burnable, Operator {
     /**
-     * @notice Constructs the Hash Cash ERC-20 contract.
+     * @notice Constructs the Jam Cash ERC-20 contract.
      */
     constructor() public ERC20('JAM', 'JAM') {
-        // Mints 1 Hash Cash to contract creator for initial Uniswap oracle deployment.
+        // Mints 1 Jam Cash to contract creator for initial Uniswap oracle deployment.
         // Will be burned after oracle deployment
         _mint(msg.sender, 1 * 10**18);
     }
@@ -17,14 +17,14 @@ contract JAM is ERC20Burnable, Operator {
     //        super._beforeTokenTransfer(from, to, amount);
     //        require(
     //            to != operator(),
-    //            "hash.cash: operator as a recipient is not allowed"
+    //            "jam.cash: operator as a recipient is not allowed"
     //        );
     //    }
 
     /**
-     * @notice Operator mints hash cash to a recipient
+     * @notice Operator mints jam cash to a recipient
      * @param recipient_ The address of recipient
-     * @param amount_ The amount of hash cash to mint to
+     * @param amount_ The amount of jam cash to mint to
      * @return whether the process has been done
      */
     function mint(address recipient_, uint256 amount_)

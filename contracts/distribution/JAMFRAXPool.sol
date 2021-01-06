@@ -93,7 +93,7 @@ contract FRAXWrapper {
 }
 
 contract JAMFRAXPool is FRAXWrapper, IRewardDistributionRecipient {
-    IERC20 public hashCash;
+    IERC20 public jamCash;
     uint256 public DURATION = 7 days;
 
     uint256 public starttime;
@@ -111,11 +111,11 @@ contract JAMFRAXPool is FRAXWrapper, IRewardDistributionRecipient {
     event RewardPaid(address indexed user, uint256 reward);
 
     constructor(
-        address hashCash_,
+        address jamCash_,
         address FRAX_,
         uint256 starttime_
     ) public {
-        hashCash = IERC20(hashCash_);
+        jamCash = IERC20(jamCash_);
         FRAX = IERC20(FRAX_);
         starttime = starttime_;
     }
@@ -200,7 +200,7 @@ contract JAMFRAXPool is FRAXWrapper, IRewardDistributionRecipient {
         uint256 reward = earned(msg.sender);
         if (reward > 0) {
             rewards[msg.sender] = 0;
-            hashCash.safeTransfer(msg.sender, reward);
+            jamCash.safeTransfer(msg.sender, reward);
             emit RewardPaid(msg.sender, reward);
         }
     }

@@ -15,8 +15,8 @@ import './utils/Epoch.sol';
 import './utils/ContractGuard.sol';
 
 /**
- * @title Hash Cash Treasury contract
- * @notice Monetary policy logic to adjust supplies of hash cash assets
+ * @title Jam Cash Treasury contract
+ * @notice Monetary policy logic to adjust supplies of jam cash assets
  * @author Summer Smith & Rick Sanchez
  */
 contract Treasury is ContractGuard, Epoch {

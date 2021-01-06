@@ -4,10 +4,9 @@ const { POOL_START_DATE } = require('./pools');
 const JAM = artifacts.require('JAM');
 const Share = artifacts.require('Share');
 const Oracle = artifacts.require('Oracle');
-const MockDai = artifacts.require('MockDai');
 
-const DAIJAMLPToken_BASPool = artifacts.require('DAIJAMLPTokenSharePool');
-const DAIJAZZLPToken_BASPool = artifacts.require('DAIJAZZLPTokenSharePool');
+const USDCJAMLPToken_BASPool = artifacts.require('USDCJAMLPTokenSharePool');
+const USDCJAZZLPToken_BASPool = artifacts.require('USDCJAZZLPTokenSharePool');
 
 const UniswapV2Factory = artifacts.require('UniswapV2Factory');
 
@@ -15,34 +14,31 @@ module.exports = async (deployer, network, accounts) => {
   const uniswapFactory = ['dev'].includes(network)
     ? await UniswapV2Factory.deployed()
     : await UniswapV2Factory.at(knownContracts.UniswapV2Factory[network]);
-  const dai =
-    network === 'mainnet'
-      ? await IERC20.at(knownContracts.DAI[network])
-      : await MockDai.deployed();
+  const usdc = await IERC20.at(knownContracts.USDC[network])
 
   const oracle = await Oracle.deployed();
 
-  const dai_bac_lpt = await oracle.pairFor(
+  const usdc_jam_lpt = await oracle.pairFor(
     uniswapFactory.address,
     JAM.address,
-    dai.address
+    usdc.address
   );
-  const dai_bas_lpt = await oracle.pairFor(
+  const usdc_jazz_lpt = await oracle.pairFor(
     uniswapFactory.address,
     Share.address,
-    dai.address
+    usdc.address
   );
 
   await deployer.deploy(
-    DAIJAMLPToken_BASPool,
+    USDCJAMLPToken_BASPool,
     Share.address,
-    dai_bac_lpt,
+    usdc_jam_lpt,
     POOL_START_DATE
   );
   await deployer.deploy(
-    DAIJAZZLPToken_BASPool,
+    USDCJAZZLPToken_BASPool,
     Share.address,
-    dai_bas_lpt,
+    usdc_jazz_lpt,
     POOL_START_DATE
   );
 };
