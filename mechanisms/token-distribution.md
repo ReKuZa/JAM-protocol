@@ -31,16 +31,16 @@ Rewards are designed to incentivise the right balance between capital in Liquidi
 |  | JAM/USDC mines JAZZ |  | JAM staking mines JAZZ \(Stake JAM to earn JAZZ\) |  |
 | :--- | :--- | :--- | :--- | :--- |
 |  | Jazz Per Week | Percent of total JAZZ rewards to LP Providers | Percent of total JAZZ to single asset JAM Stakers  | JAZZ Per Week |
-| 1st week | 10000 | 90% | 10% | 1000 |
-| 2nd week | 10000 | 90% | 10% | 1000 |
-| 3rd week | 10000 | 80% | 20% | 2000 |
-| 4th | 10000 | 70% | 30% | 3000 |
-| 5th | 10000 | 60% | 40% | 4000 |
-| 6th | 10000 | 50% | 50% | 5000 |
-| 7th | 10000 | 40% | 60% | 6000 |
-| 8th | 10000 | 30% | 70% | 7000 |
-| 9th | 10000 | 20% | 80% | 7000 |
-| 10th | 10000 | 20% | 80% | 8000 |
+| 1st week | 9000 | 90% | 10% | 1000 |
+| 2nd week | 9000 | 90% | 10% | 1000 |
+| 3rd week | 8000 | 80% | 20% | 2000 |
+| 4th | 7000 | 70% | 30% | 3000 |
+| 5th | 6000 | 60% | 40% | 4000 |
+| 6th | 5000 | 50% | 50% | 5000 |
+| 7th | 4000 | 40% | 60% | 6000 |
+| 8th | 3000 | 30% | 70% | 7000 |
+| 9th | 2000 | 20% | 80% | 8000 |
+| 10th | 2000 | 20% | 80% | 8000 |
 
 ## Distribution of JAZZ after the first 10 weeks
 
