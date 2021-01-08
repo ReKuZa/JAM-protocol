@@ -82,12 +82,20 @@ async function migration(deployer, network, accounts) {
   await deployer.deploy(SimpleFund);
 
   // 2. Deploy oracle for the pair between bac and usdc
-  await deployer.deploy(
+  const bondOracle = await deployer.deploy(
     Oracle,
     uniswap.address,
     jam.address,
     usdc.address,
     HOUR,
+    ORACLE_START_DATE
+  );
+  const seignorageOracle = await deployer.deploy(
+    Oracle,
+    uniswap.address,
+    jam.address,
+    usdc.address,
+    DAY,
     ORACLE_START_DATE
   );
 
@@ -101,8 +109,8 @@ async function migration(deployer, network, accounts) {
     jam.address,
     Bond.address,
     Share.address,
-    Oracle.address,
-    Oracle.address,
+    bondOracle.address,
+    seignorageOracle.address,
     Boardroom.address,
     SimpleFund.address,
     startTime

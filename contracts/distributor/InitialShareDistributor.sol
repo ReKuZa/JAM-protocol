@@ -16,21 +16,21 @@ contract InitialShareDistributor is IDistributor {
     IERC20 public share;
     IRewardDistributionRecipient public usdcJamLPPool;
     uint256 public usdcJamInitialBalance;
-    IRewardDistributionRecipient public usdcJazzLPPool;
-    uint256 public usdcJazzInitialBalance;
+    IRewardDistributionRecipient public jazzJamSingleAsset;
+    uint256 public jazzJamInitialBalance;
 
     constructor(
         IERC20 _share,
         IRewardDistributionRecipient _usdcJamLPPool,
         uint256 _usdcJamInitialBalance,
-        IRewardDistributionRecipient _usdcJazzLPPool,
-        uint256 _usdcJazzInitialBalance
+        IRewardDistributionRecipient _jazzJamSingleAsset,
+        uint256 _jazzJamInitialBalance
     ) public {
         share = _share;
         usdcJamLPPool = _usdcJamLPPool;
         usdcJamInitialBalance = _usdcJamInitialBalance;
-        usdcJazzLPPool = _usdcJazzLPPool;
-        usdcJazzInitialBalance = _usdcJazzInitialBalance;
+        jazzJamSingleAsset = _jazzJamSingleAsset;
+        jazzJamInitialBalance = _jazzJamInitialBalance;
     }
 
     function distribute() public override {
@@ -43,9 +43,9 @@ contract InitialShareDistributor is IDistributor {
         usdcJamLPPool.notifyRewardAmount(usdcJamInitialBalance);
         emit Distributed(address(usdcJamLPPool), usdcJamInitialBalance);
 
-        share.transfer(address(usdcJazzLPPool), usdcJazzInitialBalance);
-        usdcJazzLPPool.notifyRewardAmount(usdcJazzInitialBalance);
-        emit Distributed(address(usdcJazzLPPool), usdcJazzInitialBalance);
+        share.transfer(address(jazzJamSingleAsset), jazzJamInitialBalance);
+        usdcJamLPPool.notifyRewardAmount(jazzJamInitialBalance);
+        emit Distributed(address(jazzJamSingleAsset), jazzJamInitialBalance);
 
         once = false;
     }

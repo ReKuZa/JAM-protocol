@@ -6,7 +6,6 @@ const Share = artifacts.require('Share');
 const Oracle = artifacts.require('Oracle');
 
 const USDCJAMLPToken_BASPool = artifacts.require('USDCJAMLPTokenSharePool');
-const USDCJAZZLPToken_BASPool = artifacts.require('USDCJAZZLPTokenSharePool');
 
 const UniswapV2Factory = artifacts.require('UniswapV2Factory');
 
@@ -23,22 +22,11 @@ module.exports = async (deployer, network, accounts) => {
     JAM.address,
     usdc.address
   );
-  const usdc_jazz_lpt = await oracle.pairFor(
-    uniswapFactory.address,
-    Share.address,
-    usdc.address
-  );
 
   await deployer.deploy(
     USDCJAMLPToken_BASPool,
     Share.address,
     usdc_jam_lpt,
-    POOL_START_DATE
-  );
-  await deployer.deploy(
-    USDCJAZZLPToken_BASPool,
-    Share.address,
-    usdc_jazz_lpt,
     POOL_START_DATE
   );
 };
