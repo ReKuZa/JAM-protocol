@@ -172,7 +172,7 @@ contract USDCJAMLPTokenSharePool is
 
     modifier checkhalve() {
         if (block.timestamp >= periodFinish) {
-            initreward = initreward.mul(75).div(100);
+            initreward = initreward.mul(1).div(10);
 
             rewardRate = initreward.div(DURATION);
             periodFinish = block.timestamp.add(DURATION);
