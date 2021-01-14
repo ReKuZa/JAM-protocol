@@ -43,6 +43,7 @@ async function migration(deployer, network, accounts) {
   // if you don't provide liquidity to JAM-USDC pair after step 1 and before step 3,
   //  creating Oracle will fail with NO_RESERVES error.
   const unit = web3.utils.toBN(10 ** 18).toString();
+  const usdcUnit = web3.utils.toBN(10 ** 6).toString();
   const max = web3.utils
     .toBN(10 ** 18)
     .muln(10000)
@@ -59,14 +60,14 @@ async function migration(deployer, network, accounts) {
 
   // WARNING: msg.sender must hold enough USDC to add liquidity to JAM-USDC
   // otherwise transaction will revert
-  console.log('Adding liquidity to pools');
+  console.log('Adding liquidity to pools', jam.address, usdc.address);
   await uniswapRouter.addLiquidity(
     jam.address,
     usdc.address,
     unit,
+    usdcUnit,
     unit,
-    unit,
-    unit,
+    usdcUnit,
     accounts[0],
     deadline()
   );
