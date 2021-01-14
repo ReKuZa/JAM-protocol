@@ -4,6 +4,8 @@ const { jamPools, POOL_START_DATE } = require('./pools');
 // Tokens
 // deployed first
 const JAM = artifacts.require('JAM');
+const JAZZ = artifacts.require('Share');
+const JAZZJAMPool = artifacts.require('JAZZJAMPool');
 
 // ============ Main Migration ============
 module.exports = async (deployer, network, accounts) => {
@@ -19,4 +21,5 @@ module.exports = async (deployer, network, accounts) => {
     const contract = artifacts.require(contractName);
     await deployer.deploy(contract, JAM.address, tokenAddress, POOL_START_DATE);
   }
+  await deployer.deploy(JAZZJAMPool, JAZZ.address, JAM.address, POOL_START_DATE);
 };
