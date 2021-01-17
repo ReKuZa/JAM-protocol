@@ -19,8 +19,6 @@
  */
 
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-
-//const INFURA_KEY = "f897ab7649cd42cb842fa82496ce67d0";
 const MNEMONIC = "one three box zoo couch spawn gallery yellow wonder amazing violin that";
 
 module.exports = {
@@ -63,7 +61,7 @@ module.exports = {
       provider: () =>
         new HDWalletProvider(
           MNEMONIC,
-          `https://goerli-light.eth.linkpool.io`
+          "https://sandbox.truffleteams.com/ba399a71-b046-4d7c-8635-fa8d986e3493"
         ),
       network_id: 5, // Ropsten's id,
       skipDryRun: true,
